@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>The Other</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Khand|Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<!--   <script src="javascripts/libs/parallax.min.js"></script>
+  <script src="javascripts/libs/jquery.parallax.min.js"></script>
+ -->
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-transparent navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a id="title" class="navbar-brand" ui-sref="home">The Other</a>
+    </div>
+    <ul id="navlinks" class="nav navbar-nav">
+      <li><a ui-sref="artists">Artists</a></li>
+      <li><a ui-sref="products">Products</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a ui-sref="about">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col">
+        <figure class="effect-artist">
+                  <img class="artist-image" src="../images/img/artist_test.jpg" alt="">
+                  <figcaption>
+                    <div>
+                <!--       <h2><span>Artist</span></h2>
+                      <p>Lily likes to play with crayons and pencils</p> -->
+                    <!-- </div> -->
+             <!--        <a href="#">View more</a> -->
+                  <!-- </figcaption>
+              </figure>
+            </div>
+            <div class="col-offset-1">
+              <figure class="effect-artist">
+                  <img class="artist-image" src="../images/img/artist_test2.png" alt="">
+                  <figcaption>
+                    <div> -->
+                     <!--  <h2><span>Artist</span></h2>
+                      <p>Lily likes to play with crayons and pencils</p> -->
+                    <!-- </div> -->
+                    <!-- <a href="#">View more</a> -->
+                  <!-- </figcaption>
+              </figure>
+            </div>
+        </div>
+</div> --> -->
+
+
+
+
+<!-- Page Templates -->
+<main class="content" ui-view></main>
+
+<footer class="container"><a ui-sref="login">Admin</a></footer>
+
+
+<!-- Angular scripts -->
+<script src="javascripts/app.js"></script>
+<script src="javascripts/routes.js"></script>
+<script src="javascripts/components/artists/artistsController.js"></script>
+<script src="javascripts/components/products/productsController.js"></script>
+<script src="javascripts/components/home/home.js"></script>
+<script src="javascripts/components/home/homeController.js"></script>
+<script src="javascripts/components/admin/loginService.js"></script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ var indexP = function(req, res){
 
 //Show a product
 var showP = function(req, res){
-  Artist.findOne({products._id: req.params.productId}, function(err, artist){
+  Artist.findOne({'products._id': req.params.productId}, function(err, artist){
     if (err) return res.status(401).json({msg: 'Failed to retrieve product'});
     res.status(200).json(artist.products.id(req.params.productId));
   });
@@ -27,7 +27,7 @@ var createP = function(req, res){
 
 //Update product
 var updateP = function(req, res){
-  Artist.findOne({products._id: req.params.productId}, function(err, artist){
+  Artist.findOne({'products._id': req.params.productId}, function(err, artist){
     if (err) return res.json({msg: 'Failed to update product'})
     // set the new product information if it exists in the request
     if (req.body.name)  artist.product.name  = req.body.name;
@@ -46,7 +46,7 @@ var updateP = function(req, res){
 
 //Delete a product
 var delP = function(req,res){
-  Artist.findOne({products._id: req.params.productId}, function(err, artist){
+  Artist.findOne({'products._id': req.params.productId}, function(err, artist){
     if (err) return res.json({msg: 'Failed to delete product'})
     artist.product(req.params.productId).remove();
     artist.save(function(err){

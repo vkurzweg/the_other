@@ -8,6 +8,6 @@ router.get('/artists',        ArtistsCtrl.index);
 router.get('/artists/:id',    ArtistsCtrl.show);
 router.post('/artists',       ArtistsCtrl.create);
 router.put('/artists/:id',    ArtistsCtrl.update);
-router.delete('/artists/:id', ArtistsCtrl.del);
+router.delete('/artists/:id', ArtistsCtrl.delete);
 
 module.exports = router;

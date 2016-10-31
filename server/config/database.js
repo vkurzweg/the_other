@@ -11,7 +11,7 @@ mongoose.connect(url);
 
 // database connection event
 mongoose.connection.once('open', function () {
-  console.log(`Mongoose connected to: ${url}`);
+  console.log(`Mongoose connected to: ${mongoose.connection.host}:${mongoose.connection.port}`);
 });
 
 module.exports = mongoose;
