@@ -30,7 +30,7 @@ a {
 /*Footer*/
 
 footer {
-  margin-top: 500px;
+  margin-top: 300px;
   margin-left: 500px;
   margin-bottom: 20px;
   text-align: right;
@@ -98,3 +98,58 @@ figure.effect-artist:hover p {
 #artist-image, #product-image {
   margin: 5px;
 }
+
+/*Details*/
+
+#artist-detail-view, #product-detail-view {
+  margin: 30px;
+}
+
+#artist-detail-image {
+  margin-right: 20px;
+  max-width: 75%;
+}
+
+#artist-detail-bio {
+  margin-left: 50px;
+}
+
+#product-detail-image {
+  margin-left: 40px;
+}
+
+/*Login*/
+#login {
+  margin: 100px;
+}
+
+/*Dashboard*/
+
+.dashboard-view {
+  margin-top: 75px;
+  margin-left: 175px;
+}
+
+.new-btn {
+  margin-top: 10px;
+}
+
+.btn-warning {
+  margin: 5px;
+}
+
+.lists {
+  list-style-type: none;
+}
+
+
+.logout-btn {
+  float: right;
+  margin-top: 300px;
+}
+
+.dash-names {
+  margin: 10px;
+}
+
+

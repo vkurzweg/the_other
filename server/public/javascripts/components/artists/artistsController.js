@@ -4,36 +4,15 @@
   angular.module('app')
     .controller('ArtistsController', ArtistsController);
 
-  ArtistsController.$inject = ['$state', '$log', '$http', '$stateParams'];
+  ArtistsController.$inject = ['$state', '$log', '$http', '$stateParams', 'artists'];
 
-  function ArtistsController($state, $log, $http, $stateParams){
+  function ArtistsController($state, $log, $http, $stateParams, artists){
     var vm = this;
+    vm.artists = artists;
 
-    function getArtists(){
-      $http.get('http://localhost:3000/api/artists').then(function(response){
-        vm.artists = response.data;
-      }, function(err){
-        console.error('Error getting artists', err)
-      })
+    if ($stateParams.id) {
+      vm.artist = artists.find(artist => artist._id === $stateParams.id);
     }
-
-    getArtists();
-
-    function getOneArtist(){
-      var id = $stateParams.id;
-      $http.get('http/localhost:3000/api/artists/' + id).then(function(response){
-        vm.artist = response.data;
-      }, function(err){
-        console.error('Error retrieving artist', err)
-      })
-    }
-
-    getOneArtist();
-
-    // function getOneArtist(){
-    //   var id = $stateParams.id;
-    //   $state.go('artist-detail');
-    // }
 
     function createArtist(){
 

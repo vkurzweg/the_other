@@ -1,0 +1,15 @@
+<form id="artist-edit"">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input ng-model="vm.name" type="text" class="form-control" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Bio</label>
+    <textarea ng-model="vm.bio" type="text" class="form-control" placeholder="Bio">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
+  </div>
+  <button ng-click="vm.createArtist()" type="submit" class="btn btn-primary">Submit</button>
+</form>

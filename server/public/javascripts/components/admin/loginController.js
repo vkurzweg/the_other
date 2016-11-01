@@ -1,33 +1,28 @@
-(function() {
+(function(){
   'use strict';
 
-  angular.module('app')
-    .controller("LoginController", LoginController);
+  angular.module('app').controller('LoginController', LoginController);
 
-  LoginController.$inject = ["$state", "LoginService", "$log"];
+  LoginController.$inject = ['LoginService', '$state', '$log'];
 
-  function LoginController($state, LoginService, $log) {
+  function LoginController(LoginService, $state, $log) {
     var vm = this;
 
-    vm.user   = LoginService;
-    vm.logIn  = logIn;
+    vm.login = login;
+    vm.errors = null;
 
-    vm.userHold = {
-      name: "",
-      email: "",
-      password: ""
-    };
-
-    function logIn(name) {
-      $log.debug("Logging in:", vm.userHold.name);
-
-      // Log in the user by updating the service's .name:
-      vm.user.name        = vm.userHold.name;
-      vm.user.email     = vm.userHold.email;
-      vm.userHold.password    = vm.userHold.password;
-
-      $state.go("dashboard");
+    function login() {
+      LoginService.login(vm.email, vm.password)
+        .then((user) => {
+          $state.go('dashboard')
+        })
+        .catch((response) => {
+          vm.password = '';
+          vm.email = '';
+          vm.errors = response.data;
+        });
     }
+
   }
 
 })();

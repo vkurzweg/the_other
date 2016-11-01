@@ -8,7 +8,7 @@
       <ul id="products">
         <li ng-repeat="product in vm.products">
           <figure class="effect-product">
-            <a href="/products/{{product._id}}"><img id="product-image" ng-src="{{product.image}}" alt=""></a>
+            <a ui-sref="product-detail({id: '{{product._id}}' })"><img id="product-image" ng-src="{{product.image}}" alt=""></a>
           </figure>
         </li>
       </ul>

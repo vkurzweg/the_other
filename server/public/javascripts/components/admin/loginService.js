@@ -1,24 +1,54 @@
-(function() {
-  "use strict";
+(function(){
+  'use strict';
 
-  angular
-    .module('app')
+  angular.module('app')
     .factory('LoginService', LoginService);
 
-  LoginService.$inject = [];
+  LoginService.$inject = ['$http', 'AuthTokenService', '$window', '$log'];
 
-  function LoginService() {
-    var user = {
-      name:        "",
-      email:     "",
-      isLoggedIn:  isLoggedIn
-    };
+  function LoginService($http, AuthTokenService, $window, $log) {
 
-    return user;
+    var user = null;
+    var users = null;
 
-    function isLoggedIn() {
-      return user.name.length !== 0;
+    var service = {
+      login: login,
+      logout: logout,
+      getUser: getUser,
     }
+
+    return service;
+
+    function login(email, password) {
+      return $http.post('/login', {email, password})
+                  .then((response) => {
+                    var token = response.data.token;
+                    AuthTokenService.setToken(token);
+                    user = decode(token);
+                    return user;
+                  });
+    }
+
+    function logout() {
+      user = null;
+      AuthTokenService.removeToken();
+    }
+
+    function getUser() {
+      if (user) return user;
+      var token = AuthTokenService.getToken();
+      if ( token ) {
+        user = decode(token);
+        return user;
+      }
+    }
+
+    function decode(token) {
+      return JSON.parse($window.atob(token.split('.')[1])).user;
+    }
+
+
   }
+
 
 })();

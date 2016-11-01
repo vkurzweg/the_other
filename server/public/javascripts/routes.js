@@ -23,25 +23,67 @@
         url: '/artists',
         templateUrl: 'javascripts/components/artists/artists.html',
         controller: 'ArtistsController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        resolve: {
+          ArtistsService: 'ArtistsService',
+          artists: function(ArtistsService){
+            return ArtistsService.artists();
+          }
+        }
       })
        .state('artist-detail', {
         url: '/artists/:id',
         templateUrl: 'javascripts/components/artists/artist-detail.html',
         controller: 'ArtistsController',
+        controllerAs: 'vm',
+        resolve: {
+          ArtistsService: 'ArtistsService',
+          artists: function(ArtistsService){
+            return ArtistsService.artists();
+          }
+        }
+      })
+      .state('artist-new', {
+        url: '/artists',
+        templateUrl: 'javascripts/components/artists/artist-new.html',
+        controller: 'ArtistsController',
         controllerAs: 'vm'
+      })
+      .state('artist-edit', {
+        url: '/artists/:id',
+        templateUrl: 'javascripts/components/artists/artist-edit.html',
+        controller: 'ArtistsController',
+        controllerAs: 'vm',
+        resolve: {
+          ArtistsService: 'ArtistsService',
+          artists: function(ArtistsService){
+            return ArtistsService.artists();
+          }
+        }
       })
       .state('products', {
         url: '/products',
         templateUrl: 'javascripts/components/products/products.html',
         controller: 'ProductsController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        resolve: {
+          ProductsService: 'ProductsService',
+          products: function(ProductsService){
+            return ProductsService.products();
+          }
+        }
       })
        .state('product-detail', {
         url: '/products/:id',
         templateUrl: 'javascripts/components/products/product-detail.html',
         controller: 'ProductsController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        resolve: {
+          ProductsService: 'ProductsService',
+          products: function(ProductsService){
+            return ProductsService.products();
+          }
+        }
       })
       .state('login', {
         url: '/login',
@@ -52,8 +94,18 @@
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'javascripts/components/admin/dashboard.html',
-        controller: 'LoginController',
-        controllerAs: 'vm'
+        controller: 'DashboardController',
+        controllerAs: 'vm',
+        resolve: {
+          ArtistsService: 'ArtistsService',
+          artists: function(ArtistsService){
+            return ArtistsService.artists();
+          },
+          ProductsService: 'ProductsService',
+          products: function(ProductsService){
+            return ProductsService.products();
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('/');

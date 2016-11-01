@@ -20,13 +20,13 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-transparent navbar-fixed-top">
+<nav class="navbar navbar-transparent navbar-fixed-top" ng-controller="LoginController as login">
   <div class="container-fluid">
     <div class="navbar-header">
       <a id="title" class="navbar-brand" ui-sref="home">The Other</a>
     </div>
     <ul id="navlinks" class="nav navbar-nav">
-      <li><a ng-hide="!isLoggedIn" ui-sref="dashboard">Dashboard</a></li>
+      <li><a ng-hide="!login.isLoggedIn" ui-sref="dashboard">Dashboard</a></li>
       <li><a ui-sref="artists">Artists</a></li>
       <li><a ui-sref="products">Products</a></li>
       <li><a href="#">Shop</a></li>
@@ -41,7 +41,7 @@
 <main class="content" ui-view></main>
 
 <div>
-  <footer class="container"><a ui-sref="login">Admin</a></footer>
+  <footer class="container"><a ui-sref="login" ng-hide="vm.isLoggedIn()">Admin</a></footer>
 </div>
 
 <!-- Angular scripts -->
@@ -49,9 +49,17 @@
 <script src="javascripts/routes.js"></script>
 <script src="javascripts/components/artists/artistsController.js"></script>
 <script src="javascripts/components/products/productsController.js"></script>
+<script src="javascripts/components/admin/loginController.js"></script>
 <script src="javascripts/components/home/home.js"></script>
 <script src="javascripts/components/home/homeController.js"></script>
 <script src="javascripts/components/admin/loginService.js"></script>
+<script src="javascripts/components/admin/dashboardController.js"></script>
+<script src="javascripts/components/admin/loginController.js"></script>
+<script src="javascripts/components/admin/auth.config.js"></script>
+<script src="javascripts/components/admin/auth.interceptor.js"></script>
+<script src="javascripts/components/admin/auth.token.service.js"></script>
+<script src="javascripts/components/artists/artistsService.js"></script>
+<script src="javascripts/components/products/productsService.js"></script>
 
 </body>
 </html>

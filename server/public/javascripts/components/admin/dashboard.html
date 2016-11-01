@@ -1,0 +1,19 @@
+<div class="dashboard-view" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Artists</h4>
+      <button class="btn-default new-btn">Add New Artist</button>
+      <ul class="lists">
+        <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}<div class="namespace"></div><button class="btn-warning">Edit</button><button class="btn-danger">Delete</button></li>
+      </ul>
+    </div>
+    <div class="col-md-6-offset-6">
+      <h4>Products</h4>
+      <button class="btn-default new-btn">Add New Product</button>
+      <ul class="lists">
+        <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}<div class="namespace"></div><button class="btn-warning">Edit</button><button class="btn-danger">Delete</button></li>
+      </ul>
+    </div>
+  </div>
+  <button class="logout-btn" class="btn-default" ng-click="vm.logout()">Log Out</button>
+</div>

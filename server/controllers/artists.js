@@ -2,7 +2,6 @@ var Artist = require("../models/artist");
 
 //Show artists
 var index = function(req, res){
-  console.log('got to index');
   Artist.find({}, function(err, artists) {
     console.log(err, artists);
     if (err) return res.status(401).json({msg: 'Failed to retrieve artists'});

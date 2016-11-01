@@ -45,7 +45,7 @@ var artists = [
   }
 ]
 
-var admin = [
+var admins = [
   {name: 'Admin',
   email: 'othermessage@me.com',
   password: 'admin'}
@@ -63,4 +63,18 @@ Artist.remove({}, function(err) {
     process.exit();
   });
 });
+
+Admin.remove({}, function(err) {
+  if (err) console.log(err);
+  Admin.create(admins, function(err, admins) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Database seeded with " + admins.length  + " admins.");
+      mongoose.connection.close();
+    }
+    process.exit();
+  });
+});
+
 
