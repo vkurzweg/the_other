@@ -1,12 +1,21 @@
 var Artist = require("../models/artist");
 
 //Show products
-var indexP = function(req, res){
-  Artist.find({products: req.params})
+var index = function(req, res){
+  Artist.find({}, function(err, artists){
+    var products = artists.map(function(artist){
+      return artist.products
+    })
+    products = products.reduce(function(a,b){
+      return a.concat(b);
+    }, []);
+    res.json(products);
+
+  })
 }
 
 //Show a product
-var showP = function(req, res){
+var show = function(req, res){
   Artist.findOne({'products._id': req.params.productId}, function(err, artist){
     if (err) return res.status(401).json({msg: 'Failed to retrieve product'});
     res.status(200).json(artist.products.id(req.params.productId));
@@ -14,7 +23,7 @@ var showP = function(req, res){
 }
 
 //Create product
-var createP = function(req, res){
+var create = function(req, res){
   Artist.findById(req.params.artistId, function(err, artist){
     if (err) return res.status(401).json({msg: 'Failed to save product'});
     artist.products.push(req.body);
@@ -26,7 +35,7 @@ var createP = function(req, res){
 }
 
 //Update product
-var updateP = function(req, res){
+var update = function(req, res){
   Artist.findOne({'products._id': req.params.productId}, function(err, artist){
     if (err) return res.json({msg: 'Failed to update product'})
     // set the new product information if it exists in the request
@@ -45,7 +54,7 @@ var updateP = function(req, res){
 }
 
 //Delete a product
-var delP = function(req,res){
+var del = function(req,res){
   Artist.findOne({'products._id': req.params.productId}, function(err, artist){
     if (err) return res.json({msg: 'Failed to delete product'})
     artist.product(req.params.productId).remove();
@@ -56,9 +65,9 @@ var delP = function(req,res){
 }
 
 module.exports = {
-  index:   indexP,
-  show:    showP,
-  create:  createP,
-  update:  updateP,
-  delete:  delP
+  index:   index,
+  show:    show,
+  create:  create,
+  update:  update,
+  delete:  del
 }

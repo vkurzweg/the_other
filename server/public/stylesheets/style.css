@@ -30,7 +30,10 @@ a {
 /*Footer*/
 
 footer {
-  float: right;
+  margin-top: 500px;
+  margin-left: 500px;
+  margin-bottom: 20px;
+  text-align: right;
 }
 
 
@@ -40,9 +43,9 @@ footer {
 
 /*Artists*/
 
-figure.effect-artist {
+/*figure.effect-artist {
   background: #2e5d5a;
-}
+}*/
 
 figure.effect-artist img {
   max-width: none;
@@ -86,4 +89,12 @@ figure.effect-artist:hover p {
   opacity: 1;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+
+#artists, #products {
+  list-style-type: none;
+}
+
+#artist-image, #product-image {
+  margin: 5px;
 }

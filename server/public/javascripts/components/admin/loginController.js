@@ -1,8 +1,7 @@
 (function() {
-  "use strict";
+  'use strict';
 
-  angular
-    .module("app")
+  angular.module('app')
     .controller("LoginController", LoginController);
 
   LoginController.$inject = ["$state", "LoginService", "$log"];

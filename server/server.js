@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 require('dotenv').config();
+var mongoose = require('./config/database');
 
 var routes = require('./routes/index');
 var artists = require('./routes/artists');

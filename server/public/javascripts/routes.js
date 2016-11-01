@@ -27,7 +27,7 @@
       })
        .state('artist-detail', {
         url: '/artists/:id',
-        templateUrl: '',
+        templateUrl: 'javascripts/components/artists/artist-detail.html',
         controller: 'ArtistsController',
         controllerAs: 'vm'
       })
@@ -37,10 +37,22 @@
         controller: 'ProductsController',
         controllerAs: 'vm'
       })
+       .state('product-detail', {
+        url: '/products/:id',
+        templateUrl: 'javascripts/components/products/product-detail.html',
+        controller: 'ProductsController',
+        controllerAs: 'vm'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'javascripts/components/admin/login.html',
-        controller: 'AdminController',
+        controller: 'LoginController',
+        controllerAs: 'vm'
+      })
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'javascripts/components/admin/dashboard.html',
+        controller: 'LoginController',
         controllerAs: 'vm'
       });
 

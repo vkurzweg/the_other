@@ -1,0 +1,14 @@
+<div id="artist-detail-view" class="container">
+
+  <h2>{{vm.artist.name}}</h2>
+
+  <img src="{{vm.artist.image}}" alt="">
+
+  <p>{{vm.artist.bio}}</p>
+
+  <ul>
+    <li ng-repeat="product in vm.artist.products"></li>
+  </ul>
+
+
+</div>

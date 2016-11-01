@@ -26,6 +26,7 @@
       <a id="title" class="navbar-brand" ui-sref="home">The Other</a>
     </div>
     <ul id="navlinks" class="nav navbar-nav">
+      <li><a ng-hide="!isLoggedIn" ui-sref="dashboard">Dashboard</a></li>
       <li><a ui-sref="artists">Artists</a></li>
       <li><a ui-sref="products">Products</a></li>
       <li><a href="#">Shop</a></li>
@@ -34,43 +35,14 @@
   </div>
 </nav>
 
-<!-- <div class="container">
-  <div class="row">
-    <div class="col">
-        <figure class="effect-artist">
-                  <img class="artist-image" src="../images/img/artist_test.jpg" alt="">
-                  <figcaption>
-                    <div>
-                <!--       <h2><span>Artist</span></h2>
-                      <p>Lily likes to play with crayons and pencils</p> -->
-                    <!-- </div> -->
-             <!--        <a href="#">View more</a> -->
-                  <!-- </figcaption>
-              </figure>
-            </div>
-            <div class="col-offset-1">
-              <figure class="effect-artist">
-                  <img class="artist-image" src="../images/img/artist_test2.png" alt="">
-                  <figcaption>
-                    <div> -->
-                     <!--  <h2><span>Artist</span></h2>
-                      <p>Lily likes to play with crayons and pencils</p> -->
-                    <!-- </div> -->
-                    <!-- <a href="#">View more</a> -->
-                  <!-- </figcaption>
-              </figure>
-            </div>
-        </div>
-</div> --> -->
-
-
 
 
 <!-- Page Templates -->
 <main class="content" ui-view></main>
 
-<footer class="container"><a ui-sref="login">Admin</a></footer>
-
+<div>
+  <footer class="container"><a ui-sref="login">Admin</a></footer>
+</div>
 
 <!-- Angular scripts -->
 <script src="javascripts/app.js"></script>
