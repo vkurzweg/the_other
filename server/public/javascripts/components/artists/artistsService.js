@@ -4,9 +4,9 @@
   angular.module('app')
     .factory('ArtistsService', ArtistsService);
 
-  ArtistsService.$inject = ['$http', '$q'];
+  ArtistsService.$inject = ['$http', '$q', '$state'];
 
-  function ArtistsService($http, $q) {
+  function ArtistsService($http, $q, $state) {
     var _artists = null;
 
     var service = {
@@ -42,6 +42,8 @@
         console.error('Error retrieving artist', err)
       })
     }
+
+
 
 
     function createArtist(){

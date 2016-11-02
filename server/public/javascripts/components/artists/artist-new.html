@@ -1,4 +1,4 @@
-<form id="artist-new"">
+<form id="artist-new">
   <div class="form-group">
     <label for="name">Name</label>
     <input ng-model="vm.name" type="text" class="form-control" placeholder="Enter name">
@@ -8,7 +8,7 @@
     <textarea ng-model="vm.bio" type="text" class="form-control" placeholder="Bio">
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
+    <label for="exampleInputFile">Image</label>
     <input type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
   </div>
   <button ng-click="vm.createArtist()" type="submit" class="btn btn-primary">Submit</button>

@@ -32,10 +32,13 @@
       return vm.artists;
     }
 
-    getAllArtists();
-
     function getAllProducts(){
       return vm.products;
+    }
+
+    function newArtistForm(){
+      console.log('clicked')
+      $state.go('artist-new');
     }
 
 

@@ -44,7 +44,7 @@
         }
       })
       .state('artist-new', {
-        url: '/artists',
+        url: 'api/artists/new',
         templateUrl: 'javascripts/components/artists/artist-new.html',
         controller: 'ArtistsController',
         controllerAs: 'vm'
