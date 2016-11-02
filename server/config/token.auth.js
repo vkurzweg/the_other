@@ -1,6 +1,6 @@
 var Admin = require("../models/admin");
 var jwt = require('jsonwebtoken');
-var secret = 'shhhhh';
+var dotenv = require('dotenv');
 
 var jwtOptions = {
  algorithm: 'HS256',
@@ -20,7 +20,7 @@ function authenticate(req, res, next) {
 
   var token = authHeader.split(' ')[1]
 
-  jwt.verify(token, secret, (err, decoded) => {
+  jwt.verify(token, process.env.TOKEN_SECRET, (err, decoded) => {
     if (err) return next(err)
     req.decoded = decoded;
     next()
