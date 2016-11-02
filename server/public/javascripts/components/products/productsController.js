@@ -10,13 +10,14 @@
     var vm = this;
 
     vm.products = products;
+    vm.createP = createProduct;
 
     if ($stateParams.id) {
       vm.product = products.find(product => product._id === $stateParams.id);
     }
 
     function createProduct(){
-
+      ProductsService.createP(vm.name, vm.medium, vm.description, vm.artist, vm.price, vm.image);
     }
 
     function updateProduct(id){

@@ -45,8 +45,16 @@
     }
 
 
-    function createProduct(){
-
+    function createProduct(name, medium, artist, description, image){
+      $http.post('/api/products', {
+        name: name,
+        medium: medium,
+        artist: artist,
+        description: description,
+        image: image
+      }).then(function(response){
+        console.log(response)
+      })
     }
 
     function updateProduct(id){
