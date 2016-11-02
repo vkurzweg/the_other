@@ -26,7 +26,7 @@ var create = function(req, res){
   artist.products = [];
   artist.save(function(err, artist){
     if (err) return res.status(401).json({msg: 'Failed to save artist'});
-    res.status(201).json(trip);
+    res.status(201).json(artist);
  });
 }
 

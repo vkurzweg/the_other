@@ -4,18 +4,19 @@
   angular.module('app')
     .controller('ArtistsController', ArtistsController);
 
-  ArtistsController.$inject = ['$state', '$log', '$http', '$stateParams', 'artists'];
+  ArtistsController.$inject = ['$state', '$log', '$http', '$stateParams', 'artists', 'ArtistsService'];
 
-  function ArtistsController($state, $log, $http, $stateParams, artists){
+  function ArtistsController($state, $log, $http, $stateParams, artists, ArtistsService){
     var vm = this;
     vm.artists = artists;
+    vm.create = createArtist;
 
     if ($stateParams.id) {
       vm.artist = artists.find(artist => artist._id === $stateParams.id);
     }
 
     function createArtist(){
-
+      ArtistsService.create()
     }
 
     function updateArtist(id){

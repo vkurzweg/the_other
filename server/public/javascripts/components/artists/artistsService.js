@@ -43,11 +43,14 @@
       })
     }
 
-
-
-
-    function createArtist(){
-
+    function createArtist(name, bio, image){
+      $http.post('/api/artists', {
+        name: name,
+        bio: bio,
+        image: image
+      }).then(function(response){
+        console.log(response)
+      })
     }
 
     function updateArtist(id){

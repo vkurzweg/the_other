@@ -1,19 +1,74 @@
 <div class="dashboard-view" class="container">
   <div class="row">
     <div class="col-md-6">
-      <h4>Artists</h4>
-      <button ui-sref="artist-new" class="btn-default new-btn">Add New Artist</button>
+
+      <h4 class="dashboard-title">Artists</h4>
+
+      <a ng-click="vm.isAFormOpen = !vm.isAFormOpen"><i class="glyphicon glyphicon-plus"></i></a>
+
+      <form ng-show="vm.isAFormOpen" id="artist-new">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input ng-model="vm.name" type="text" class="form-control" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Bio</label>
+          <textarea ng-model="vm.bio" type="text" class="form-control" placeholder="Bio"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Image</label>
+          <input type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
+        </div>
+        <button ng-click="vm.create()" class="btn btn-primary">Submit</button>
+      </form>
+
       <ul class="lists">
-        <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}<div class="namespace"></div><button class="btn-warning">Edit</button><button class="btn-danger">Delete</button></li>
+        <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}<div class="namespace"></div><a ui-sref="artist-edit"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="deleteArtist()" class="glyphicon glyphicon-trash"></i></li>
       </ul>
+
     </div>
-    <div class="col-md-6-offset-6">
-      <h4>Products</h4>
-      <button class="btn-default new-btn">Add New Product</button>
+
+    <div class="col-md-6">
+
+      <h4 class="dashboard-title">Products</h4>
+
+      <a ng-click="isPFormOpen = !isPFormOpen"><i class="glyphicon glyphicon-plus"></i></a>
+
+      <!-- <form ng-show="vm.isPFormOpen" id="product-new"">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input ng-model="vm.name" type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleSelect1">Artist</label>
+          <select ng-model="vm.artist" class="form-control" id="exampleSelect1">
+            <option ng-repeat="vm.artist.name"></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="medium">Medium</label>
+          <input ng-model="vm.medium" type="text" class="form-control" placeholder="Medium">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea ng-model="vm.description" type="text" class="form-control" placeholder="Description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input ng-model="vm.price" type="text" class="form-control" placeholder="Price">
+        </div>
+        <div class="form-group">
+          <label for="image">Image</label>
+          <input ng-model="vm.image" type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
+        </div>
+        <button ng-click="vm.createProduct()" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+ -->
       <ul class="lists">
-        <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}<div class="namespace"></div><button class="btn-warning">Edit</button><button class="btn-danger">Delete</button></li>
+        <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}<div class="namespace"></div><a ui-sref="product-edit"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="deleteProduct()" class="glyphicon glyphicon-trash"></i></li>
       </ul>
+
     </div>
+
   </div>
-  <button class="logout-btn" class="btn-default" ng-click="vm.logout()">Log Out</button>
 </div>
