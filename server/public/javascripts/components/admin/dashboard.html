@@ -1,27 +1,26 @@
 <div class="dashboard-view" class="container">
   <div class="row">
-
     <div class="col-md-6">
 
       <h4 class="dashboard-title">Artists</h4>
 
-      <a ng-click="isAFormOpen = !isAFormOpen"><i class="glyphicon glyphicon-plus"></i></a>
+      <a ng-click="vm.isAFormOpen = !vm.isAFormOpen"><i class="glyphicon glyphicon-plus"></i></a>
 
-<!--       <form ng-show="isAFormOpen" id="artist-new">
+      <form ng-show="vm.isAFormOpen" id="artist-new">
         <div class="form-group">
           <label for="name">Name</label>
           <input ng-model="vm.name" type="text" class="form-control" placeholder="Enter name">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Bio</label>
-          <textarea ng-model="vm.bio" type="text" class="form-control" placeholder="Bio">
+          <textarea ng-model="vm.bio" type="text" class="form-control" placeholder="Bio"></textarea>
         </div>
         <div class="form-group">
           <label for="exampleInputFile">Image</label>
           <input type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
         </div>
-        <button ng-click="vm.createArtist()" type="submit" class="btn btn-primary">Submit</button>
-      </form> -->
+        <button ng-click="vm.create()" class="btn btn-primary">Submit</button>
+      </form>
 
       <ul class="lists">
         <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}<div class="namespace"></div><a ui-sref="artist-edit"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="deleteArtist()" class="glyphicon glyphicon-trash"></i></li>
@@ -35,7 +34,7 @@
 
       <a ng-click="isPFormOpen = !isPFormOpen"><i class="glyphicon glyphicon-plus"></i></a>
 
- <!--      <form ng-show="isPFormOpen" id="product-new"">
+      <!-- <form ng-show="vm.isPFormOpen" id="product-new"">
         <div class="form-group">
           <label for="name">Name</label>
           <input ng-model="vm.name" type="text" class="form-control" placeholder="Name">
@@ -52,7 +51,7 @@
         </div>
         <div class="form-group">
           <label for="description">Description</label>
-          <textarea ng-model="vm.description" type="text" class="form-control" placeholder="Description">
+          <textarea ng-model="vm.description" type="text" class="form-control" placeholder="Description"></textarea>
         </div>
         <div class="form-group">
           <label for="price">Price</label>
@@ -63,8 +62,8 @@
           <input ng-model="vm.image" type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
         </div>
         <button ng-click="vm.createProduct()" type="submit" class="btn btn-primary">Submit</button>
-      </form> -->
-
+      </form>
+ -->
       <ul class="lists">
         <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}<div class="namespace"></div><a ui-sref="product-edit"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="deleteProduct()" class="glyphicon glyphicon-trash"></i></li>
       </ul>

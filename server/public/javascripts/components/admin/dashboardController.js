@@ -15,6 +15,7 @@
     vm.isLoggedIn = false;
     vm.artists = artists;
     vm.products = products;
+    vm.create = createArtist;
 
 
     function logout() {
@@ -36,9 +37,8 @@
       return vm.products;
     }
 
-    function newArtistForm(){
-      console.log('clicked')
-      $state.go('artist-new');
+    function createArtist(){
+      ArtistsService.createArtist();
     }
 
 
