@@ -85,6 +85,12 @@
           }
         }
       })
+      .state('product-new', {
+        url: 'api/products/new',
+        templateUrl: 'javascripts/components/artists/product-new.html',
+        controller: 'ProductsController',
+        controllerAs: 'vm'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'javascripts/components/admin/login.html',

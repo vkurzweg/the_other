@@ -10,6 +10,8 @@
 
     vm.login = login;
     vm.errors = null;
+    vm.getUser = LoginService.getUser;
+    vm.logout = LoginService.logout;
 
     function login() {
       LoginService.login(vm.email, vm.password)

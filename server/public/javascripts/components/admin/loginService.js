@@ -4,9 +4,9 @@
   angular.module('app')
     .factory('LoginService', LoginService);
 
-  LoginService.$inject = ['$http', 'AuthTokenService', '$window', '$log'];
+  LoginService.$inject = ['$http', 'AuthTokenService', '$window', '$log', '$state'];
 
-  function LoginService($http, AuthTokenService, $window, $log) {
+  function LoginService($http, AuthTokenService, $window, $log, $state) {
 
     var user = null;
     var users = null;
@@ -32,6 +32,7 @@
     function logout() {
       user = null;
       AuthTokenService.removeToken();
+      $state.go('home');
     }
 
     function getUser() {

@@ -26,7 +26,7 @@
       <a id="title" class="navbar-brand" ui-sref="home">The Other</a>
     </div>
     <ul id="navlinks" class="nav navbar-nav">
-      <li><a ng-hide="!login.isLoggedIn" ui-sref="dashboard">Dashboard</a></li>
+      <li><a ng-show="login.getUser()" ui-sref="dashboard">Dashboard</a></li>
       <li><a ui-sref="artists">Artists</a></li>
       <li><a ui-sref="products">Products</a></li>
       <li><a href="#">Shop</a></li>
@@ -40,8 +40,8 @@
 <!-- Page Templates -->
 <main class="content" ui-view></main>
 
-<div>
-  <footer class="container"><a ui-sref="login" ng-hide="vm.isLoggedIn()">Admin</a></footer>
+<div ng-controller="LoginController as login">
+  <footer class="footer footer-transparent navbar-fixed-bottom"><a class="login-links" ng-show="login.getUser()" ng-click="login.logout()">Logout</a><a class="login-links" ui-sref="login" ng-hide="login.getUser()">Login</a></footer>
 </div>
 
 <!-- Angular scripts -->

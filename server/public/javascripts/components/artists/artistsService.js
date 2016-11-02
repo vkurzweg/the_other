@@ -54,11 +54,19 @@
     }
 
     function updateArtist(id){
-
+      $http.put('api/artists/' + id, {
+        name: artist.name,
+        bio: artist.bio,
+        image: artist.image,
+      }).then(function(response){
+        console.log(response)
+      })
     }
 
     function deleteArtist(id){
-
+      $http.delete('/api/artists/' + id).then(function(response){
+        console.log(response)
+      }).then(getArtists)
     }
 
   }
