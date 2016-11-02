@@ -42,7 +42,7 @@ function create(req, res, next) {
           status: 403
         });
       }
-      var token = jwt.sign({ user: user }, secret, jwtOptions);
+      var token = jwt.sign({ user: user }, process.env.TOKEN_SECRET, jwtOptions);
       return res.json({
         token: token
       });
