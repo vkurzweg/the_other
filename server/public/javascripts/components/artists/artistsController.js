@@ -16,7 +16,7 @@
     }
 
     function createArtist(){
-      ArtistsService.create()
+      ArtistsService.create(vm.name, vm.bio, vm.image)
     }
 
     function updateArtist(id){

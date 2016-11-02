@@ -34,7 +34,7 @@
 
       <a ng-click="isPFormOpen = !isPFormOpen"><i class="glyphicon glyphicon-plus"></i></a>
 
-      <!-- <form ng-show="vm.isPFormOpen" id="product-new"">
+      <form ng-show="vm.isPFormOpen" id="product-new"">
         <div class="form-group">
           <label for="name">Name</label>
           <input ng-model="vm.name" type="text" class="form-control" placeholder="Name">
@@ -63,7 +63,7 @@
         </div>
         <button ng-click="vm.createProduct()" type="submit" class="btn btn-primary">Submit</button>
       </form>
- -->
+
       <ul class="lists">
         <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}<div class="namespace"></div><a ui-sref="product-edit"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="deleteProduct()" class="glyphicon glyphicon-trash"></i></li>
       </ul>
