@@ -30,16 +30,31 @@ a {
 /*Footer*/
 
 footer {
-  margin-top: 300px;
-  margin-left: 500px;
   margin-bottom: 20px;
   text-align: right;
+  color: gray;
 }
 
 
 /*Home*/
 
+.home-view {
+  background-image: url('../../images/wallpaper.jpg');
+}
 
+#home1 {
+  max-width: 70%;
+  margin-left: 400px;
+}
+
+#home2 {
+  max-width: 90%;
+  margin-left: 350px;
+}
+
+#home3 {
+  max-width: 60%;
+}
 
 /*Artists*/
 
@@ -128,6 +143,7 @@ figure.effect-artist:hover p {
 .dashboard-view {
   margin-top: 75px;
   margin-left: 175px;
+  margin-right: 150px;
 }
 
 .new-btn {
@@ -150,6 +166,19 @@ figure.effect-artist:hover p {
 
 .dash-names {
   margin: 10px;
+  border-bottom: .5px solid black;
 }
 
+.glyphicon {
+  width: 3vw;
+  margin: 20px;
+}
+
+.glyphicon-plus {
+  margin-left: 50px;
+}
+
+.dashboard-title {
+  margin-left: 50px;
+}
 
