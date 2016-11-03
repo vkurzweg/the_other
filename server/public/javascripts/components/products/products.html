@@ -3,15 +3,12 @@
   <!-- <label for="Search Products"><input ng-model="" type="text"></label> -->
 
   <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-        <div ng-repeat="product in vm.products">
-          <figure class="effect-product">
-            <a ui-sref="product-detail({id: '{{product._id}}' })"><img id="product-image" ng-src="{{product.image}}" alt=""></a>
+    <div class="col-md-4"></div>
+    <div ng-repeat="product in vm.products" class="col-md-4">
+          <figure class="gallery-item">
+            <a ui-sref="product-detail({id: '{{product._id}}' })"><img class="product-image" ng-src="{{product.image}}" alt=""></a>
           </figure>
-        </div>
-      </ul>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-4"></div>
   </div>
 </div>

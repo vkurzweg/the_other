@@ -22,7 +22,10 @@
     }
 
     function updateArtist(id){
-      ArtistsService.updateArtist(vm.name, vm.bio, vm.image)
+      ArtistsService.updateArtist(vm.artist)
+        .then(function() {
+          $state.go('dashboard');
+        });
     }
 
     function deleteArtist(id){

@@ -44,13 +44,13 @@
         }
       })
       .state('artist-new', {
-        url: 'api/artists/new',
+        url: '/artists/new',
         templateUrl: 'javascripts/components/artists/artist-new.html',
         controller: 'ArtistsController',
         controllerAs: 'vm'
       })
       .state('artist-edit', {
-        url: 'api/artists/:id',
+        url: '/artists/:id/edit',
         templateUrl: 'javascripts/components/artists/artist-edit.html',
         controller: 'ArtistsController',
         controllerAs: 'vm',

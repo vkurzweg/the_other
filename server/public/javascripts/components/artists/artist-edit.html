@@ -1,15 +1,15 @@
-<form id="artist-edit"">
+<form class="artist-edit"">
   <div class="form-group">
     <label for="name">Name</label>
-    <input ng-model="vm.name" type="text" class="form-control" placeholder="Enter name">
+    <input ng-model="vm.artist.name" type="text" class="form-control" value="{{vm.artist.name}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Bio</label>
-    <textarea ng-model="vm.bio" type="text" class="form-control" placeholder="Bio">
+    <textarea ng-model="vm.artist.bio" type="text" class="form-control" value="{{vm.artist.bio}}"></textarea>
   </div>
   <div class="form-group">
     <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
+    <input type="file" class="form-control-file" ng-model="vm.artist.image" value="{{vm.artist.image}}" aria-describedby="fileHelp">
   </div>
-  <button ng-click="vm.createArtist()" type="submit" class="btn btn-primary">Submit</button>
+  <button ng-click="vm.updateArtist()" type="submit" class="btn btn-primary">Submit</button>
 </form>

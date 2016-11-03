@@ -49,7 +49,7 @@ footer {
 
 .img-home {
   max-width: 70%;
-  margin-left: 90px;
+  margin-left: 0px;
 }
 
 /*.tilt {
@@ -111,6 +111,12 @@ figure.effect-artist:hover img {
 
 .artist-image {
   width: 250px;
+}
+
+/*Products*/
+
+.product-image {
+  width: 50%;
 }
 
 /*Details*/
@@ -188,3 +194,6 @@ figure.effect-artist:hover img {
   margin: 50px;
 }
 
+.artist-edit {
+  margin: 50px;
+}

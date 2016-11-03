@@ -23,7 +23,7 @@
     }
 
     function updateProduct(id){
-      ProductsService.updateProduct(vm.name, vm.medium, vm.description, vm.artist, vm.price, vm.image)
+      ProductsService.updateProduct(vm.name, vm.medium, vm.description, vm.price, vm.image);
     }
 
     function deleteProduct(id){

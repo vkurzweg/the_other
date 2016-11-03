@@ -31,20 +31,25 @@ var create = function(req, res){
 }
 
 var update = function(req, res){
-  Artist.findbyId(req.params.id, function(err, artist){
-    if (err) return res.status(401).json({msg: 'Failed to update artist'});
-    //set the new artist info if it exists in the request
-    if (req.body.name) artist.name = req.body.name;
-    if (req.body.bio) artist.bio = req.body.bio;
-    if (req.body.image) artist.image = req.body.image;
-    //save the artist
-    artist.save(function(err, updatedArtist){
-      if (err) {
-        res.send(err);
-      }
-      res.json(updatedArtist);
-    })
-  })
+  Artist.findByIdAndUpdate(req.body._id, req.body, {new: true}, function(err, updatedArtist) {
+    if (err) res.status(400).res.json(err);
+    res.json(updatedArtist);
+  });
+
+  // Artist.findbyId(req.params.id, function(err, artist){
+  //   if (err) return res.status(401).json({msg: 'Failed to update artist'});
+  //   //set the new artist info if it exists in the request
+  //   if (req.body.name) artist.name = req.body.name;
+  //   if (req.body.bio) artist.bio = req.body.bio;
+  //   if (req.body.image) artist.image = req.body.image;
+  //   //save the artist
+  //   artist.save(function(err, updatedArtist){
+  //     if (err) {
+  //       res.send(err);
+  //     }
+  //     res.json(updatedArtist);
+  //   })
+  // })
 }
 
 var del = function(req, res){

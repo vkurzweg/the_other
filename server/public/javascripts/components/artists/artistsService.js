@@ -54,14 +54,13 @@
       })
     }
 
-    function updateArtist(id){
-      $http.put('api/artists/' + id, {
-        name: artist.name,
-        bio: artist.bio,
-        image: artist.image,
-      }).then(function(response){
-        console.log(response)
-      })
+    function updateArtist(artist){
+      return $http.put('api/artists/' + artist._id, artist)
+        .then(function(response){
+          var updatedArtist = response.data;
+          var idx = _artists.findIndex(artist => artist._id === updatedArtist._id);
+          _artists[idx] = updatedArtist;
+        });
     }
 
     function deleteArtist(id){
