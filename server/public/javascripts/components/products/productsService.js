@@ -58,13 +58,13 @@
       })
     }
 
-    function updateProduct(id){
+    function updateProduct(id, name, medium, artist, description, price, image){
       return $http.put('/api/products/' + id, {
-        name: product.name,
-        medium: product.medium,
-        artist: product.artist,
-        description: product.description,
-        image: product.image,
+        name: name,
+        medium: medium,
+        artist: artist,
+        description: description,
+        image: image,
       }).then(function(response){
         console.log(response)
       })

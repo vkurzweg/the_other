@@ -1,12 +1,14 @@
 <div id="product-detail-view" class="container">
   <div class="row">
     <h2 id="product-detail-name">{{vm.product.name}}</h2>
+    <h3>{{vm.product.artist}}</h3>
     <div class="col-md-6">
-      <img id="product-detail-image" src="{{vm.product.image}}" alt="">
+      <img class="product-detail-image" ng-src="{{vm.product.image}}" alt="">
     </div>
     <div class="col-md-6-offset-6">
       <p id="product-detail-desc">{{vm.product.description}}</p>
       <p id="product-detail-price">${{vm.product.price}}</p>
+      <button class="btn btn-default">Shop</button>
     </div>
   </div>
 

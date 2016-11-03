@@ -47,6 +47,11 @@ footer {
   max-width: 60%;
 }
 
+.img-home {
+  max-width: 70%;
+  margin-left: 90px;
+}
+
 /*.tilt {
   overflow: hidden;
   position: relative;
@@ -123,8 +128,9 @@ figure.effect-artist:hover img {
   margin-left: 50px;
 }
 
-#product-detail-image {
+.product-detail-image {
   margin-left: 40px;
+  width: 400px;
 }
 
 /*Login*/
