@@ -14,7 +14,6 @@
 
     function addToken(config) {
       var token = AuthTokenService.getToken();
-      console.log(token);
       if (token) {
         config.headers = config.headers || {};
         config.headers.Authorization = `Bearer ${token}`;

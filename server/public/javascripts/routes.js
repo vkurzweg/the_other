@@ -85,6 +85,18 @@
           }
         }
       })
+       .state('product-edit', {
+        url: '/artists/:id/products',
+        templateUrl: 'javascripts/components/products/product-edit.html',
+        controller: 'ProductsController',
+        controllerAs: 'vm',
+        resolve: {
+          ProductsService: 'ProductsService',
+          products: function(ProductsService){
+            return ProductsService.products();
+          }
+        }
+      })
       .state('product-new', {
         url: 'api/products/new',
         templateUrl: 'javascripts/components/artists/product-new.html',

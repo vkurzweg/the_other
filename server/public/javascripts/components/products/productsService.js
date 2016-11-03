@@ -46,7 +46,7 @@
 
 
     function createProduct(name, medium, artist, description, image){
-      $http.post('/api/products', {
+      return $http.post('/api/products', {
         name: name,
         medium: medium,
         artist: artist,
@@ -54,15 +54,28 @@
         image: image
       }).then(function(response){
         console.log(response)
+        return response;
       })
     }
 
     function updateProduct(id){
-
+      $http.put('api/products/' + id, {
+        name: product.name,
+        medium: product.medium,
+        artist: product.artist,
+        description: product.description,
+        image: product.image,
+      }).then(function(response){
+        console.log(response)
+      })
     }
 
     function deleteProduct(id){
-
+      $http.delete('/api/products/' + id).then(function(response) {
+        console.log(response);
+      }, function(err) {
+        console.error('Error deleting product', err);
+      }).then(getProducts);
     }
 
   }

@@ -15,10 +15,12 @@
     vm.isLoggedIn = false;
     vm.artists = artists;
     vm.products = products;
-    vm.createA = createArtist;
-    vm.updateA = updateArtist;
-    vm.deleteA = deleteArtist;
-    vm.createP = createProduct;
+    vm.createArtist = createArtist;
+    vm.updateArtist = updateArtist;
+    vm.deleteArtist = deleteArtist;
+    vm.createProduct = createProduct;
+    vm.updateProduct = updateProduct;
+    vm.deleteProduct = deleteProduct;
 
 
 
@@ -31,7 +33,6 @@
       vm.isLoggedIn = true;
     }
 
-
     function getAllArtists(){
       console.log(vm.artists)
       return vm.artists;
@@ -42,21 +43,32 @@
     }
 
     function createArtist(){
-      ArtistsService.createArtist();
+      ArtistsService.createArtist(vm.name, vm.bio, vm.image).then(function(response){
+      vm.artists.push(response.data);
+      })
     }
 
     function updateArtist(){
       ArtistsService.updateArtist();
     }
 
-    function deleteArtist(){
+    function deleteArtist(id){
       ArtistsService.deleteArtist();
     }
 
     function createProduct(){
-      ProductsService.createProduct();
+      ProductsService.createProduct(vm.name, vm.medium, vm.artist, vm.description, vm.image).then(function(response){
+        vm.artist.products.push(response.data);
+      })
     }
 
+    function updateProduct(){
+      ProductsService.updateProduct();
+    }
+
+    function deleteProduct(id){
+      ProductsService.deleteProduct();
+    }
 
   }
 

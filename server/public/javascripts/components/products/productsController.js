@@ -10,22 +10,24 @@
     var vm = this;
 
     vm.products = products;
-    vm.createP = createProduct;
+    vm.createProduct = createProduct;
+    vm.updateProduct = updateProduct;
+    vm.deleteProduct = deleteProduct;
 
     if ($stateParams.id) {
       vm.product = products.find(product => product._id === $stateParams.id);
     }
 
     function createProduct(){
-      ProductsService.createP(vm.name, vm.medium, vm.description, vm.artist, vm.price, vm.image);
+      ProductsService.createProduct(vm.name, vm.medium, vm.description, vm.artist, vm.price, vm.image);
     }
 
     function updateProduct(id){
-
+      ProductsService.updateProduct(vm.name, vm.medium, vm.description, vm.artist, vm.price, vm.image)
     }
 
     function deleteProduct(id){
-
+      ProductsService.deleteProduct()
     }
 
     // function getProducts(){

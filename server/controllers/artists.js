@@ -48,11 +48,13 @@ var update = function(req, res){
 }
 
 var del = function(req, res){
-  Artist.findByIdAndRemove(req.params.id, function(err, artist){
+  var id = req.params.id;
+  Artist.remove({'_id': id}, function(err) {
     if (err) return res.status(401).json({msg: 'Failed to delete artist'});
-    res.json(artists);
+    res.json();
   });
 }
+
 
 module.exports = {
   index:   index,

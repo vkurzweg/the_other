@@ -17,7 +17,6 @@
     }
 
     function setToken(token) {
-      console.log(token);
       return store.setItem(key, token);
     }
 

@@ -23,7 +23,7 @@
       </form>
 
       <ul class="lists">
-        <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}<div class="namespace"></div><a ui-sref="artist-edit"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="vm.deleteA()" class="glyphicon glyphicon-trash"></i></li>
+        <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}<div class="namespace"></div><a ui-sref="artist-edit"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="vm.deleteArtist()" class="glyphicon glyphicon-trash"></i></li>
       </ul>
 
     </div>
@@ -65,7 +65,7 @@
       </form>
 
       <ul class="lists">
-        <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}<div class="namespace"></div><a ui-sref="product-edit"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="deleteProduct()" class="glyphicon glyphicon-trash"></i></li>
+        <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}<div class="namespace"></div><a ui-sref="product-edit({id: '{{product._id}}'})"><i class="glyphicon glyphicon-edit"></i></a><i ng-click="vm.deleteProduct()" class="glyphicon glyphicon-trash"></i></li>
       </ul>
 
     </div>
