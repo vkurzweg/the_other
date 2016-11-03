@@ -6,43 +6,99 @@ var Admin = require('../models/admin');
 
 var artists = [
   {
-    name: 'Artist',
-    bio: 'Four loko humblebrag normcore, tilde locavore distillery venmo snackwave cardigan waistcoat vinyl single-origin coffee kale chips fap. Hot chicken tousled four loko disrupt blog, quinoa gochujang synth austin iceland activated charcoal cornhole keffiyeh woke.',
-    image: '/images/img/artist_test.jpg',
+    name: 'Aaron Freshour',
+    bio: 'Lorem ipsum dolor sit amet, quo suas justo graecis te. An possit admodum disputando nam. Et duo equidem offendit democritum, qui ea dicat accusam. Dolorum percipit te cum, his in etiam facilis. Has ea debet interpretaris, meis aeque ad pri. Te mel iusto suscipiantur. Nemore voluptua elaboraret duo ne, an mel vidit primis appellantur.',
+    image: '/images/AF_Portrait.jpg',
     products: [{
         name: 'Work',
         medium: 'Sculpture',
-        description: 'Subway tile single-origin coffee literally pickled.',
+        description: 'An possit admodum disputando nam.',
         price: 99,
-        image: '/images/img/test_image1.jpg'
+        image: '/images/AF_product_1_detail_2.jpg'
+      },
+      {
+        name: 'Wallpaper 2',
+        medium: 'Wallpaper',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/AF_Wallpaper_2.jpg'
+      },
+      {
+        name: 'Wallpaper 3',
+        medium: 'Wallpaper',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/AF_Wallpaper_3.jpg'
       }]
   },
 
   {
-    name: 'Artist',
-    bio: 'Next level jianbing post-ironic slow-carb, retro celiac lo-fi occupy. Health goth seitan poke glossier actually, copper mug dreamcatcher butcher williamsburg bicycle rights vegan.',
-    image: '/images/img/artist_test2.png',
+    name: 'Brian Mendez',
+    bio: 'Lorem ipsum dolor sit amet, quo suas justo graecis te. An possit admodum disputando nam. Et duo equidem offendit democritum, qui ea dicat accusam. Dolorum percipit te cum, his in etiam facilis. Has ea debet interpretaris, meis aeque ad pri. Te mel iusto suscipiantur. Nemore voluptua elaboraret duo ne, an mel vidit primis appellantur.',
+    image: '/images/BM_Portrait.jpg',
     products: [{
         name: 'Work',
-        medium: 'Mixed Media',
-        description: 'Lomo iceland echo park retro.',
-        price: 113,
-        image: '/images/img/test_image2.jpg'
+        medium: 'Canvas',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/BM_Product_1_Detail.jpg'
+      },
+      {
+        name: 'Work',
+        medium: 'Canvas',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/BM_Product_2.jpg'
+      },
+      {
+        name: 'Wallpaper 1',
+        medium: 'Wallpaper',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/BM_Wallpaper_1.jpg'
       }]
   },
 
   {
-    name: 'Artist',
-    bio: 'Quinoa etsy meh, sartorial squid fanny pack tofu coloring book thundercats polaroid vape letterpress kickstarter banh mi before they sold out.',
-    image: '/images/img/artist_test3.jpg',
+    name: 'Paige Smith',
+    bio: 'Lorem ipsum dolor sit amet, quo suas justo graecis te. An possit admodum disputando nam. Et duo equidem offendit democritum, qui ea dicat accusam. Dolorum percipit te cum, his in etiam facilis. Has ea debet interpretaris, meis aeque ad pri. Te mel iusto suscipiantur. Nemore voluptua elaboraret duo ne, an mel vidit primis appellantur.',
+    image: '/images/PS_Portrait.jpg',
+    products: [{
+        name: 'Wallpaper_1',
+        medium: 'Wallpaper',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/PS_Wallpaper_1.jpg'
+      },
+      {
+        name: 'Wallpaper_2',
+        medium: 'Wallpaper',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/PS_Wallpaper_2.jpg'
+      }]
+  },
+
+  {
+    name: 'Yuval Pudik',
+    bio: 'Lorem ipsum dolor sit amet, quo suas justo graecis te. An possit admodum disputando nam. Et duo equidem offendit democritum, qui ea dicat accusam. Dolorum percipit te cum, his in etiam facilis. Has ea debet interpretaris, meis aeque ad pri. Te mel iusto suscipiantur. Nemore voluptua elaboraret duo ne, an mel vidit primis appellantur.',
+    image: '/images/YP_Portrait.jpg',
     products: [{
         name: 'Work',
-        medium: 'Performance',
-        description: 'Hoodie wolf letterpress, try-hard venmo portland artisan paleo.',
-        price: 113,
-        image: '/images/img/test_image3.jpg'
+        medium: 'Wallpaper',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/YP_Product_1.png'
+      },
+      {
+        name: 'Wallpaper_1',
+        medium: 'Wallpaper',
+        description: 'An possit admodum disputando nam.',
+        price: 99,
+        image: '/images/YP_Wallpaper_1.jpg'
       }]
   }
+
 ]
 
 var admins = [

@@ -24,12 +24,13 @@ var show = function(req, res){
 
 //Create product
 var create = function(req, res){
-  Artist.findById(req.params.artistId, function(err, artist){
+  Artist.findById(req.params.id, function(err, artist){
     if (err) return res.status(401).json({msg: 'Failed to save product'});
     artist.products.push(req.body);
     //save the product
     artist.save(function(err){
-      res.status(201).json(artist);
+      var product = artist.products[artist.products.length - 1];
+      res.status(201).json(product);
     });
  });
 }
@@ -55,9 +56,9 @@ var update = function(req, res){
 
 //Delete a product
 var del = function(req,res){
-  Artist.findOne({'products._id': req.params.productId}, function(err, artist){
+  Artist.findOne({'products._id': req.params.id}, function(err, artist){
     if (err) return res.json({msg: 'Failed to delete product'})
-    artist.product(req.params.productId).remove();
+    artist.products.pull(req.params.id);
     artist.save(function(err){
       res.json(artist);
     });

@@ -36,7 +36,7 @@
     }
 
     function getOneProduct(productId){
-      $http.get('/api/products/' + id).then(function(response){
+      return $http.get('/api/products/' + id).then(function(response){
         console.log(_product);
         _product = response.data;
       }, function(err){
@@ -45,12 +45,12 @@
     }
 
 
-    function createProduct(name, medium, artist, description, image){
-      return $http.post('/api/products', {
+    function createProduct(name, medium, artist, description, price, image){
+      return $http.post('/api/artists/' + artist._id + '/products', {
         name: name,
         medium: medium,
-        artist: artist,
         description: description,
+        price: price,
         image: image
       }).then(function(response){
         console.log(response)
@@ -59,7 +59,7 @@
     }
 
     function updateProduct(id){
-      $http.put('api/products/' + id, {
+      return $http.put('/api/products/' + id, {
         name: product.name,
         medium: product.medium,
         artist: product.artist,
@@ -71,7 +71,7 @@
     }
 
     function deleteProduct(id){
-      $http.delete('/api/products/' + id).then(function(response) {
+      return $http.delete('/api/products/' + id).then(function(response) {
         console.log(response);
       }, function(err) {
         console.error('Error deleting product', err);

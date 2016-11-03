@@ -12,7 +12,7 @@
       .state('home', {
         url: '/',
         templateUrl: 'javascripts/components/home/home.html',
-        controller: 'HomeController',
+        controller: 'LoginController',
         controllerAs: 'vm'
       })
       .state('about', {
@@ -50,7 +50,7 @@
         controllerAs: 'vm'
       })
       .state('artist-edit', {
-        url: '/artists/:id',
+        url: 'api/artists/:id',
         templateUrl: 'javascripts/components/artists/artist-edit.html',
         controller: 'ArtistsController',
         controllerAs: 'vm',
@@ -86,7 +86,7 @@
         }
       })
        .state('product-edit', {
-        url: '/artists/:id/products',
+        url: '/products/:id/edit',
         templateUrl: 'javascripts/components/products/product-edit.html',
         controller: 'ProductsController',
         controllerAs: 'vm',
@@ -98,7 +98,7 @@
         }
       })
       .state('product-new', {
-        url: 'api/products/new',
+        url: 'api/artists/:id/products',
         templateUrl: 'javascripts/components/artists/product-new.html',
         controller: 'ProductsController',
         controllerAs: 'vm'

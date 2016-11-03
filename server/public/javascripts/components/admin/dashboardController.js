@@ -53,12 +53,12 @@
     }
 
     function deleteArtist(id){
-      ArtistsService.deleteArtist();
+      ArtistsService.deleteArtist(id);
     }
 
     function createProduct(){
-      ProductsService.createProduct(vm.name, vm.medium, vm.artist, vm.description, vm.image).then(function(response){
-        vm.artist.products.push(response.data);
+      ProductsService.createProduct(vm.name, vm.medium, vm.artist, vm.description, vm.price, vm.image).then(function(response){
+        vm.products.push(response.data);
       })
     }
 
@@ -67,7 +67,11 @@
     }
 
     function deleteProduct(id){
-      ProductsService.deleteProduct();
+      ProductsService.deleteProduct(id).then(function(){
+        vm.products = vm.products.filter(function(p){
+          return p._id !== id;
+        })
+      });
     }
 
   }

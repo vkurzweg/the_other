@@ -42,34 +42,44 @@ footer {
 
 /*Home*/
 
-.home-view {
-  background-image: url('../../images/wallpaper.jpg');
-}
-
-#home1 {
-  max-width: 70%;
-  margin-left: 400px;
-}
-
-#home2 {
-  max-width: 90%;
-  margin-left: 350px;
-}
-
-#home3 {
+.home {
+  margin: auto;
   max-width: 60%;
 }
 
-/*Artists*/
+/*.tilt {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
 
-/*figure.effect-artist {
-  background: #2e5d5a;
+.tilt__back,
+.tilt__front {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.tilt__back {
+  position: relative;
+}
+
+.tilt__front {
+  position: absolute;
+  top: 0;
+  left: 0;
 }*/
 
+/*Artists*/
+
+
 figure.effect-artist img {
-  max-width: none;
-  width: -webkit-calc(50% + 60px);
-  width: calc(50% + 60px);
   opacity: 1;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -85,37 +95,17 @@ figure.effect-artist:hover img {
   transform: translate3d(0,0,0) scale(1);
 }
 
-figure.effect-artist h2 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 1em 1.2em;
-}
-
-figure.effect-artist p {
-  padding: 0 10px 0 0;
+.artist-image, #product-image {
   width: 50%;
-  border-right: 1px solid #fff;
-  text-align: right;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-40px,0,0);
-  transform: translate3d(-40px,0,0);
+  float: right;
 }
 
-figure.effect-artist:hover p {
-  opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+.artists-view {
+  width: 500px;
 }
 
-#artists, #products {
-  list-style-type: none;
-}
-
-#artist-image, #product-image {
-  margin: 5px;
+.artist-image {
+  width: 250px;
 }
 
 /*Details*/
