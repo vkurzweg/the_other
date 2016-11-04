@@ -1,10 +1,14 @@
 ##The Other
 
+[![other_screenshot.jpg](https://s16.postimg.org/4eq2kvged/other_screenshot.jpg)](https://postimg.org/image/nwkq0tdc1/)
+
 Find it here: 
 
 https://the-other.herokuapp.com/
 
 This is a single-page application for viewing and curating art. It features a dashboard that allows authorized users to easily create, update and delete images and information about artists and products. 
+
+[![the_other2.jpg](https://s17.postimg.org/jfsohdpsv/the_other2.jpg)](https://postimg.org/image/vho2biz17/)
 
 Wireframes, ERD, etc on Trello:
 
