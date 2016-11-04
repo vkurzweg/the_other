@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-md-6">
 
-      <h4 class="dashboard-title">Artists</h4>
+      <h4 id="artists-title" class="dashboard-title">Artists</h4>
 
-      <a class="add" ng-click="vm.isAFormOpen = !vm.isAFormOpen"><i class="glyphicon glyphicon-plus"></i>Add Artist</a>
+      <button id="add-artist" class="btn btn-success" ng-click="vm.isAFormOpen = !vm.isAFormOpen">Add Artist</button>
 
       <form ng-show="vm.isAFormOpen" id="artist-new">
         <div class="form-group">
@@ -26,7 +26,7 @@
         <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}
           <div class="namespace"></div>
           <a ui-sref="artist-edit({id: '{{artist._id}}'})"><i class="glyphicon glyphicon-edit"></i></a>
-          <i ng-click="vm.deleteArtist(artist._id)" class="glyphicon glyphicon-trash"></i>
+          <a href="#"><i ng-click="vm.deleteArtist(artist._id)" class="glyphicon glyphicon-trash"></i></a>
         </li>
       </ul>
 
@@ -36,7 +36,7 @@
 
       <h4 class="dashboard-title">Products</h4>
 
-      <a class="add" ng-click="vm.isPFormOpen = !vm.isPFormOpen"><i class="glyphicon glyphicon-plus"></i>Add Product</a>
+      <button class="btn btn-success" ng-click="vm.isPFormOpen = !vm.isPFormOpen">Add Product</button>
 
       <form ng-show="vm.isPFormOpen" id="product-new"">
         <div class="form-group">

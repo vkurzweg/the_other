@@ -264,6 +264,7 @@ figure.effect-artist:hover img {
 
 .glyphicon {
   width: 3vw;
+  height: 200%;
   margin: 20px;
 }
 
@@ -271,12 +272,31 @@ figure.effect-artist:hover img {
   margin-left: 50px;
 }
 
+.btn-success {
+  background-color: #2BC28B;
+  color: white;
+  margin: 50px;
+  margin-left: 50pxpx;
+}
+
+#add-artist {
+  margin-left: 375px;
+}
+
 .dashboard-title {
   margin-left: 50px;
 }
 
+#artists-title {
+  text-align: right;
+}
+
 .add {
   margin-right: 20px;
+  text-align: center;
+}
+
+.lists {
   text-align: center;
 }
 
