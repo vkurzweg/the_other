@@ -19,10 +19,6 @@
       vm.product = products.find(product => product._id === $stateParams.id);
     }
 
-    if ($stateParams.id) {
-      vm.artist = artists.find(artist => artist._id === $stateParams.id);
-    }
-
     function createProduct(){
       ProductsService.createProduct(vm.name, vm.medium, vm.description, vm.artist, vm.price, vm.image);
     }
