@@ -44,12 +44,12 @@ footer {
 
 .home {
   margin: auto;
-  max-width: 60%;
+  max-width: 50%;
 }
 
 .img-home {
   max-width: 70%;
-  margin-left: 0px;
+  margin-left: 80px;
 }
 
 /*.tilt {
@@ -100,27 +100,22 @@ figure.effect-artist:hover img {
   transform: translate3d(0,0,0) scale(1);
 }
 
-.artist-image, #product-image {
-  width: 50%;
-  float: right;
-}
-
 .artists-view {
-  width: 500px;
+  width: 300px;
 }
 
 .artist-image {
-  width: 250px;
+  width: 30%;
 }
 
 /*Products*/
 
 .product-image {
-  width: 50%;
+  width: 30%;
 }
 
 .products-view {
-  width: 30%;
+  width: 300px;
 }
 
 .hovereffect {
@@ -294,3 +289,10 @@ figure.effect-artist:hover img {
 .artist-edit {
   margin: 50px;
 }
+
+/*About*/
+
+.about {
+  margin: 50px;
+}
+

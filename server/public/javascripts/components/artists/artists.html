@@ -1,12 +1,9 @@
-<div class="container" class="artists-view">
-<!--   <div class="row"> -->
-
-        <div ng-repeat="artist in vm.artists">
-          <figure class="effect-artist">
-            <a ui-sref="artist-detail({id: '{{artist._id}}' })"><img class="artist-image" ng-src="{{artist.image}}" alt=""></a>
-          </figure>
-        </div>
-
-<!--   </div> -->
+<div class="container artists-view">
+  <div ng-repeat="artist in vm.artists" class="hovereffect">
+      <a ui-sref="artist-detail({id: '{{artist._id}}' })"><img class="img-responsive artist-image" ng-src="{{artist.image}}" alt="product image"></a>
+      <div class="overlay">
+          <h2>{{artist.name}}</h2>
+      </div>
+  </div>
 </div>
 

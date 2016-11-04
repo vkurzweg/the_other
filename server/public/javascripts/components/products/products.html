@@ -1,10 +1,8 @@
-
-
 <div class="container products-view">
-  <div ng-repeat="product in vm.products track by $index" class="hovereffect">
-      <a ui-sref="product-detail({id: '{{product._id}}' })"><img class="img-responsive product-image" ng-src="{{product.image}}" alt="">
+  <div ng-repeat="product in vm.products" class="hovereffect">
+      <a ui-sref="product-detail({id: '{{product._id}}' })"><img class="img-responsive product-image" ng-src="{{product.image}}" alt="product image">
       <div class="overlay">
-          <h2>{{vm.artists.name[$index]}}</h2>
+          <h2>{{product.name}}</h2>
       </div>
   </div>
 </div>

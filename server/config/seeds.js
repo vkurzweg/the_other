@@ -10,13 +10,6 @@ var artists = [
     bio: 'Lorem ipsum dolor sit amet, quo suas justo graecis te. An possit admodum disputando nam. Et duo equidem offendit democritum, qui ea dicat accusam. Dolorum percipit te cum, his in etiam facilis. Has ea debet interpretaris, meis aeque ad pri. Te mel iusto suscipiantur. Nemore voluptua elaboraret duo ne, an mel vidit primis appellantur.',
     image: '/images/AF_Portrait.jpg',
     products: [{
-        name: 'Work',
-        medium: 'Sculpture',
-        description: 'An possit admodum disputando nam.',
-        price: 99,
-        image: '/images/AF_product_1_detail_2.jpg'
-      },
-      {
         name: 'Wallpaper 2',
         medium: 'Wallpaper',
         description: 'An possit admodum disputando nam.',
