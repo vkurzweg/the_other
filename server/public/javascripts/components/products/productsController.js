@@ -23,7 +23,10 @@
     }
 
     function updateProduct(id){
-      ProductsService.updateProduct(vm.name, vm.medium, vm.description, vm.price, vm.image);
+      ProductsService.updateProduct(vm.product)
+      .then(function() {
+          $state.go('dashboard');
+        });
     }
 
     function deleteProduct(id){

@@ -37,21 +37,12 @@ var create = function(req, res){
 
 //Update product
 var update = function(req, res){
-  Artist.findOne({'products._id': req.params.productId}, function(err, artist){
-    if (err) return res.json({msg: 'Failed to update product'})
-    // set the new product information if it exists in the request
-    if (req.body.name)  artist.product.name  = req.body.name;
-    if (req.body.medium) artist.product.medium = req.body.medium;
-    if (req.body.description) artist.product.description = req.body.description;
-    if (req.body.price) artist.product.price = req.body.price;
-    if (req.body.image) artist.product.image = req.body.image;
-    // save the product
-    artist.product.save(function(err, updatedProduct) {
-      if (err) return res.status(401).json({msg: 'Failed to update product'});
-      // return the product
-      res.json(updatedProduct);
-    });
-  });
+  Artist.findOneAndUpdate(
+    {'products._id' : req.params.id}, { '$set': { 'products.$' : req.body } }, function(err, artist) {
+    console.log(artist);
+    if (err) res.status(400).res.json(err);
+    res.json(artist);
+  })
 }
 
 //Delete a product

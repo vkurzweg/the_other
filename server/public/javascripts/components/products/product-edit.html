@@ -16,8 +16,8 @@
     <input ng-model="vm.product.price" type="text" class="form-control" value="{{vm.product.price}}">
   </div>
   <div class="form-group">
-    <label for="image">Image</label>
-    <input ng-model="vm.product.image" type="file" class="form-control-file" value="{{vm.product.image}} ng-model="vm.image" aria-describedby="fileHelp">
+    <label for="image">Image URL</label>
+    <input ng-model="vm.product.image" type="text" class="form-control" value="{{vm.product.image}} ng-model="vm.image">
   </div>
   <button ng-click="vm.updateProduct()" class="btn btn-primary">Submit</button>
 </form>

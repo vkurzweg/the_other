@@ -58,16 +58,13 @@
       })
     }
 
-    function updateProduct(productId, name, medium, description, price, image){
-      return $http.put('/api/products/' + productId, {
-        name: name,
-        medium: medium,
-        description: description,
-        price: price,
-        image: image,
-      }).then(function(response){
-        console.log(response)
-      })
+    function updateProduct(product){
+      return $http.put('/api/products/' + product._id, product)
+      .then(function(response){
+        var updatedProduct = response.data;
+          var idx = _products.findIndex(product => product._id === updatedProduct._id);
+          _products[idx] = updatedProduct;
+      });
     }
 
     function deleteProduct(id){

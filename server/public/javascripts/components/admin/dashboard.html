@@ -4,7 +4,7 @@
 
       <h4 class="dashboard-title">Artists</h4>
 
-      <a ng-click="vm.isAFormOpen = !vm.isAFormOpen"><i class="glyphicon glyphicon-plus"></i></a>
+      <a class="add" ng-click="vm.isAFormOpen = !vm.isAFormOpen"><i class="glyphicon glyphicon-plus"></i>Add Artist</a>
 
       <form ng-show="vm.isAFormOpen" id="artist-new">
         <div class="form-group">
@@ -16,8 +16,8 @@
           <textarea ng-model="vm.bio" type="text" class="form-control" placeholder="Bio"></textarea>
         </div>
         <div class="form-group">
-          <label for="exampleInputFile">Image</label>
-          <input type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
+          <label for="exampleInputFile">Image URL</label>
+          <input type="text" class="form-control" ng-model="vm.image">
         </div>
         <button ng-click="vm.createArtist()" class="btn btn-primary">Submit</button>
       </form>
@@ -36,7 +36,7 @@
 
       <h4 class="dashboard-title">Products</h4>
 
-      <a ng-click="vm.isPFormOpen = !vm.isPFormOpen"><i class="glyphicon glyphicon-plus"></i></a>
+      <a class="add" ng-click="vm.isPFormOpen = !vm.isPFormOpen"><i class="glyphicon glyphicon-plus"></i>Add Product</a>
 
       <form ng-show="vm.isPFormOpen" id="product-new"">
         <div class="form-group">
@@ -61,8 +61,8 @@
           <input ng-model="vm.price" type="text" class="form-control" placeholder="Price">
         </div>
         <div class="form-group">
-          <label for="image">Image</label>
-          <input ng-model="vm.image" type="file" class="form-control-file" ng-model="vm.image" aria-describedby="fileHelp">
+          <label for="image">Image URL</label>
+          <input ng-model="vm.image" type="text" class="form-control" ng-model="vm.image">
         </div>
         <button ng-click="vm.createProduct()" class="btn btn-primary">Submit</button>
       </form>

@@ -8,8 +8,8 @@
     <textarea ng-model="vm.artist.bio" type="text" class="form-control" value="{{vm.artist.bio}}"></textarea>
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" ng-model="vm.artist.image" value="{{vm.artist.image}}" aria-describedby="fileHelp">
+    <label for="exampleInputFile">Image URL</label>
+    <input type="text" class="form-control" ng-model="vm.artist.image" value="{{vm.artist.image}}">
   </div>
   <button ng-click="vm.updateArtist()" type="submit" class="btn btn-primary">Submit</button>
 </form>
