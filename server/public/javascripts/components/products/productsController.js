@@ -4,18 +4,23 @@
   angular.module('app')
     .controller('ProductsController', ProductsController);
 
-  ProductsController.$inject = ['$state', '$log', '$http', '$stateParams', 'products', 'ProductsService'];
+  ProductsController.$inject = ['$state', '$log', '$http', '$stateParams', 'products', 'ProductsService', 'ArtistsService'];
 
-  function ProductsController($state, $log, $http, $stateParams, products, ProductsService){
+  function ProductsController($state, $log, $http, $stateParams, products, ProductsService, ArtistsService){
     var vm = this;
 
     vm.products = products;
+    vm.artists = [];
     vm.createProduct = createProduct;
     vm.updateProduct = updateProduct;
     vm.deleteProduct = deleteProduct;
 
     if ($stateParams.id) {
       vm.product = products.find(product => product._id === $stateParams.id);
+    }
+
+    if ($stateParams.id) {
+      vm.artist = artists.find(artist => artist._id === $stateParams.id);
     }
 
     function createProduct(){
@@ -33,6 +38,9 @@
       ProductsService.deleteProduct()
     }
 
+    function getArtist(){
+      vm.artists = ArtistsService.getAllArtists;
+    }
 
 
   }
