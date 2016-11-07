@@ -9,6 +9,10 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /*Navbar*/
 
 .navbar {
@@ -216,6 +220,7 @@ figure.effect-artist:hover img {
 #artist-detail-image {
   margin-right: 20px;
   max-width: 75%;
+  display: inline;
 }
 
 #artist-detail-bio {
