@@ -75,7 +75,7 @@ var artists = [
   {
     name: 'Yuval Pudik',
     bio: 'Lorem ipsum dolor sit amet, quo suas justo graecis te. An possit admodum disputando nam. Et duo equidem offendit democritum, qui ea dicat accusam. Dolorum percipit te cum, his in etiam facilis. Has ea debet interpretaris, meis aeque ad pri. Te mel iusto suscipiantur. Nemore voluptua elaboraret duo ne, an mel vidit primis appellantur.',
-    image: '/images/YP_Portrait.jpg',
+    image: '/images/YP_Portrait.JPG',
     products: [{
         name: 'Work',
         medium: 'Wallpaper',
