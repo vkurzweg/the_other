@@ -122,6 +122,21 @@ figure.effect-artist:hover img {
   width: 100%;
 }
 
+.product-carousel {
+  margin-top: 30px;
+}
+
+.artist-product {
+  margin: 1%;
+  width: 23%;
+  float: left;
+}
+
+.artist-product-image {
+  max-height: 200px;
+  overflow: hidden;
+}
+
 /*Products*/
 
 .masonry {
@@ -131,6 +146,7 @@ figure.effect-artist:hover img {
 
 .product-image {
   width: 100%;
+  display: block;
 }
 
 .products-view {

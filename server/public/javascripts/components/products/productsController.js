@@ -14,9 +14,16 @@
     vm.createProduct = createProduct;
     vm.updateProduct = updateProduct;
     vm.deleteProduct = deleteProduct;
+    vm.getCurrentProduct = getCurrentProduct;
+    vm.currentArtist = null;
 
     if ($stateParams.id) {
       vm.product = products.find(product => product._id === $stateParams.id);
+    }
+
+    function getCurrentProduct(product){
+      vm.currentArtist = ArtistsService.getCurrentArtist(product);
+      console.log(vm.currentArtist);
     }
 
     function createProduct(){

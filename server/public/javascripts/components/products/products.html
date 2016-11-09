@@ -1,5 +1,5 @@
 <div class="container masonry">
-  <div ng-repeat="product in vm.products" class="hovereffect products-view">
+  <div ng-click="vm.getCurrentProduct(product)" ng-repeat="product in vm.products" class="hovereffect products-view">
       <a ui-sref="product-detail({id: '{{product._id}}' })"><img class="img-responsive product-image" ng-src="{{product.image}}" alt="product image">
       <div class="overlay">
           <h2>{{product.name}}</h2>

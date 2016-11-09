@@ -15,7 +15,8 @@
       getOneArtist: getOneArtist,
       createArtist: createArtist,
       updateArtist: updateArtist,
-      deleteArtist: deleteArtist
+      deleteArtist: deleteArtist,
+      getCurrentArtist: getCurrentArtist
     }
 
     return service;
@@ -24,6 +25,8 @@
       var deferred = $q.defer();
       $http.get('/api/artists').then(function(response){
         _artists = response.data;
+        console.log('2')
+        console.log(_artists)
         deferred.resolve(_artists);
       }, function(err){
         deferred.reject('Error getting artists');
@@ -33,6 +36,22 @@
 
     function getAllArtists(){
       return _artists;
+    }
+
+    function getCurrentArtist(product){
+      console.log('yay')
+      console.log(product)
+      console.log('1')
+      for (var i=0; i < _artists.length; i++){
+        for (var j=0; j < _artists[i].products.length; j++){
+          if (product._id == _artists[i].products[j]._id){
+            console.log(_artists[i])
+            return _artists[i];
+          } else {
+            console.log('boo')
+          }
+        }
+      }
     }
 
     function getOneArtist(artistId){

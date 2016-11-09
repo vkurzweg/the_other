@@ -8,11 +8,12 @@
       <p id="artist-detail-bio">{{vm.artist.bio}}</p>
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <ul>
-        <li ng-repeat="product in vm.artist.products"></li>
-      </ul>
+  <div class="row product-carousel">
+    <div class="artist-product" ng-repeat="product in vm.artist.products">
+      <div class="artist-product-image">
+        <img class="product-image" ng-src="{{product.image}}" alt="">
+      </div>
+      <p>{{product.name}}</p>
     </div>
   </div>
 </div>
