@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   padding-top: 70px;
   color: black;
@@ -105,27 +111,36 @@ figure.effect-artist:hover img {
 }
 
 .artists-view {
-  width: 300px;
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1.2em;
+  width: 100%;
 }
 
+
 .artist-image {
-  width: 30%;
+  width: 100%;
 }
 
 /*Products*/
 
+.masonry {
+    column-count: 4;
+    column-gap: 1.5em;
+}
+
 .product-image {
-  width: 30%;
+  width: 100%;
 }
 
 .products-view {
-  width: 300px;
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1.2em;
+  width: 100%;
 }
 
 .hovereffect {
-  width: 100%;
-  height: 100%;
-  float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
