@@ -26,7 +26,7 @@
         <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}
           <div class="namespace"></div>
           <a ui-sref="artist-edit({id: '{{artist._id}}'})"><i class="glyphicon glyphicon-edit"></i></a>
-          <a class="custom-pointer" href=""><i ng-click="vm.deleteArtist(artist._id)" class="glyphicon glyphicon-trash"></i></a>
+          <a class="custom-pointer" href=""><i ng-click="vm.deleteArtistModal(artist._id)" class="glyphicon glyphicon-trash"></i></a>
         </li>
       </ul>
 
@@ -71,11 +71,49 @@
         <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}
           <div class="namespace"></div>
           <a ui-sref="product-edit({id: '{{product._id}}'})"><i class="glyphicon glyphicon-edit"></i></a>
-          <a class="custom-pointer" href=""><i ng-click="vm.deleteProduct(product._id)" class="glyphicon glyphicon-trash"></i></a>
+          <a class="custom-pointer" href=""><i ng-click="vm.deleteProductModal(product._id)" class="glyphicon glyphicon-trash"></i></a>
         </li>
       </ul>
 
     </div>
 
+  </div>
+</div>
+
+
+<!-- Modals -->
+<div class="modal fade" id="delete-confirm-artist" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this artist?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button ng-click="vm.deleteArtist()" type="button" class="btn btn-danger" data-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="delete-confirm-product" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this product?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button ng-click="vm.deleteProduct()" type="button" class="btn btn-danger" data-dismiss="modal">Confirm</button>
+      </div>
+    </div>
   </div>
 </div>

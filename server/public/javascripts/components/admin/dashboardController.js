@@ -21,6 +21,9 @@
     vm.createProduct = createProduct;
     vm.updateProduct = updateProduct;
     vm.deleteProduct = deleteProduct;
+    vm.deleteArtistModal = deleteArtistModal;
+    vm.deleteProductModal = deleteProductModal;
+    vm.currentDeletedId = null;
 
 
 
@@ -53,8 +56,22 @@
       ArtistsService.updateArtist();
     }
 
-    function deleteArtist(id){
-      ArtistsService.deleteArtist(id);
+    function deleteArtist(){
+      ArtistsService.deleteArtist(vm.currentDeletedId);
+      vm.currentDeletedId = null;
+      window.location.reload(true);
+    }
+
+    function deleteArtistModal(id){
+      console.log('clicked')
+      $('#delete-confirm-artist').modal();
+      vm.currentDeletedId = id;
+    }
+
+    function deleteProductModal(id){
+      console.log('clicked')
+      $('#delete-confirm-product').modal();
+      vm.currentDeletedId = id;
     }
 
     function createProduct(){
@@ -68,12 +85,14 @@
       ProductsService.updateProduct();
     }
 
-    function deleteProduct(id){
-      ProductsService.deleteProduct(id).then(function(){
+    function deleteProduct(){
+      ProductsService.deleteProduct(vm.currentDeletedId).then(function(){
         vm.products = vm.products.filter(function(p){
           return p._id !== id;
         })
       });
+      vm.currentDeletedId = null;
+      window.location.reload(true);
     }
 
   }
