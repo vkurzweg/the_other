@@ -320,16 +320,13 @@ figure.effect-artist:hover img {
   margin-left: 50pxpx;
 }
 
-#add-artist {
-  margin-left: 375px;
+#add-artist, #add-product {
+  margin: 50px auto;
+  display: block;
 }
 
 .dashboard-title {
-  margin-left: 50px;
-}
-
-#artists-title {
-  text-align: right;
+  text-align: center;
 }
 
 .add {
