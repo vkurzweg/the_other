@@ -46,6 +46,7 @@
       ArtistsService.createArtist(vm.name, vm.bio, vm.image).then(function(response){
       vm.artists.push(response.data);
       })
+      window.location.reload(true);
     }
 
     function updateArtist(){
@@ -60,6 +61,7 @@
       ProductsService.createProduct(vm.name, vm.medium, vm.artist, vm.description, vm.price, vm.image).then(function(response){
         vm.products.push(response.data);
       })
+      window.location.reload(true);
     }
 
     function updateProduct(){

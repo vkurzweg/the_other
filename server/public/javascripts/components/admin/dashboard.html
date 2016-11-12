@@ -26,7 +26,7 @@
         <li class="dash-names" ng-repeat="artist in vm.artists">{{artist.name}}
           <div class="namespace"></div>
           <a ui-sref="artist-edit({id: '{{artist._id}}'})"><i class="glyphicon glyphicon-edit"></i></a>
-          <a href="#"><i ng-click="vm.deleteArtist(artist._id)" class="glyphicon glyphicon-trash"></i></a>
+          <a class="custom-pointer" href=""><i ng-click="vm.deleteArtist(artist._id)" class="glyphicon glyphicon-trash"></i></a>
         </li>
       </ul>
 
@@ -38,7 +38,7 @@
 
       <button class="btn btn-success" ng-click="vm.isPFormOpen = !vm.isPFormOpen">Add Product</button>
 
-      <form ng-show="vm.isPFormOpen" id="product-new"">
+      <form ng-show="vm.isPFormOpen" id="product-new">
         <div class="form-group">
           <label for="name">Name</label>
           <input ng-model="vm.name" type="text" class="form-control" placeholder="Name">
@@ -71,7 +71,7 @@
         <li class="dash-names" ng-repeat="product in vm.products">{{product.name}}
           <div class="namespace"></div>
           <a ui-sref="product-edit({id: '{{product._id}}'})"><i class="glyphicon glyphicon-edit"></i></a>
-          <i ng-click="vm.deleteProduct(product._id)" class="glyphicon glyphicon-trash"></i>
+          <a class="custom-pointer" href=""><i ng-click="vm.deleteProduct(product._id)" class="glyphicon glyphicon-trash"></i></a>
         </li>
       </ul>
 

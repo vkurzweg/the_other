@@ -1,8 +1,8 @@
 <div class="container masonry">
   <div ng-repeat="artist in vm.artists" class="hovereffect artists-view">
-      <a ui-sref="artist-detail({id: '{{artist._id}}' })"><img class="img-responsive artist-image" ng-src="{{artist.image}}" alt="product image"></a>
+      <a ui-sref="artist-detail({id: '{{artist._id}}' })"><img class="img-responsive artist-image" ng-src="{{artist.image}}" alt="product image">
       <div class="overlay">
-<!--           <h2>{{artist.name}}</h2> -->
+          <h2>{{artist.name}}</h2>
       </div>
   </div>
 </div>

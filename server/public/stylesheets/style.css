@@ -309,6 +309,10 @@ figure.effect-artist:hover img {
   margin-left: 50px;
 }
 
+.custom-pointer {
+  cursor: pointer;
+}
+
 .btn-success {
   background-color: #2BC28B;
   color: white;
