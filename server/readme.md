@@ -1,3 +1,4 @@
+WDI Project 4
 ##The Other
 
 [![other_screenshot.jpg](https://s16.postimg.org/4eq2kvged/other_screenshot.jpg)](https://postimg.org/image/nwkq0tdc1/)
