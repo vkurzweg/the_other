@@ -1,14 +1,5 @@
-(function(window) {
 
-  'use strict';
 
-  /**
-   * **************************************************************************
-   * utils
-   * **************************************************************************
-   */
-
-  // from https://gist.github.com/desandro/1866474
   var lastTime = 0;
   var prefixes = 'webkit moz ms o'.split(' ');
   // get unprefixed rAF and cAF, if present
@@ -52,7 +43,6 @@
     return a;
   }
 
-  // from http://www.quirksmode.org/js/events_properties.html#position
   function getMousePos(e) {
     var posx = 0;
     var posy = 0;
@@ -73,7 +63,6 @@
     }
   }
 
-  // from http://www.sberry.me/articles/javascript-event-throttling-debouncing
   function throttle(fn, delay) {
     var allowSample = true;
 
@@ -86,11 +75,6 @@
     };
   }
 
-  /***************************************************************************/
-
-  /**
-   * TiltFx fn
-   */
   function TiltFx(el, options) {
     this.el = el;
     this.options = extend( {}, this.options );
@@ -99,9 +83,6 @@
     this._initEvents();
   }
 
-  /**
-   * TiltFx options.
-   */
   TiltFx.prototype.options = {
     // number of extra image elements (div with background-image) to add to the DOM - min:1, max:5 (for a higher number, it's recommended to remove the transitions of .tilt__front in the stylesheet.
     extraImgs : 2,
@@ -121,9 +102,6 @@
     }
   }
 
-  /**
-   * Initialize: build the necessary structure for the image elements and replace it with the HTML img element.
-   */
   TiltFx.prototype._init = function() {
     this.tiltWrapper = document.createElement('div');
     this.tiltWrapper.className = 'tilt';
@@ -170,9 +148,6 @@
     this.view = { width : this.tiltWrapper.offsetWidth, height : this.tiltWrapper.offsetHeight };
   };
 
-  /**
-   * Initialize the events on the main wrapper.
-   */
   TiltFx.prototype._initEvents = function() {
     var self = this,
       moveOpts = self.options.movement;
@@ -237,4 +212,4 @@
 
   window.TiltFx = TiltFx;
 
-})(window);
+

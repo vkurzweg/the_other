@@ -62,53 +62,8 @@ footer {
   margin-left: 80px;
 }
 
-/*.tilt {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.tilt__back,
-.tilt__front {
-  width: 100%;
-  height: 100%;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.tilt__back {
-  position: relative;
-}
-
-.tilt__front {
-  position: absolute;
-  top: 0;
-  left: 0;
-}*/
 
 /*Artists*/
-
-
-figure.effect-artist img {
-  opacity: 1;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-30px,0,0) scale(1.12);
-  transform: translate3d(-30px,0,0) scale(1.12);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-figure.effect-artist:hover img {
-  opacity: 0.5;
-  -webkit-transform: translate3d(0,0,0) scale(1);
-  transform: translate3d(0,0,0) scale(1);
-}
 
 .artists-view {
   background-color: #eee;
@@ -353,4 +308,36 @@ figure.effect-artist:hover img {
 .about {
   margin: 50px;
 }
+
+/*Media Queries*/
+
+.media-item:hover .media-item__img,
+.media-item:focus .media-item__img {
+  opacity: 1;
+}
+
+.media-item__title {
+  margin: 0;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+@media screen and (min-aspect-ratio: 1440/960) {
+  .hero__imgwrap .tilt__back,
+  .hero__imgwrap .tilt__front,
+  .hero__img {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 40em){
+  .hero {
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+
 
