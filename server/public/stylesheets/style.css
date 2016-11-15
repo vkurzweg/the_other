@@ -92,6 +92,9 @@ footer {
   overflow: hidden;
 }
 
+.pointer {
+  cursor: pointer;
+}
 /*Products*/
 
 .masonry {
@@ -338,6 +341,3 @@ footer {
     right: 20px;
   }
 }
-
-
-
