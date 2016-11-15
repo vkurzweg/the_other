@@ -45,7 +45,6 @@
       vm.artists = ArtistsService.getAllArtists;
     }
 
-
   }
 
 })();

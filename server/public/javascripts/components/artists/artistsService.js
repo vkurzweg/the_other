@@ -39,16 +39,11 @@
     }
 
     function getCurrentArtist(product){
-      console.log('yay')
-      console.log(product)
-      console.log('1')
       for (var i=0; i < _artists.length; i++){
         for (var j=0; j < _artists[i].products.length; j++){
           if (product._id == _artists[i].products[j]._id){
-            console.log(_artists[i])
             return _artists[i];
           } else {
-            console.log('boo')
           }
         }
       }

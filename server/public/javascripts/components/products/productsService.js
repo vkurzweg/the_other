@@ -44,7 +44,6 @@
       })
     }
 
-
     function createProduct(name, medium, artist, description, price, image){
       return $http.post('/api/artists/' + artist._id + '/products', {
         name: name,

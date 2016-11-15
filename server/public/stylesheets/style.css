@@ -95,6 +95,7 @@ footer {
 .pointer {
   cursor: pointer;
 }
+
 /*Products*/
 
 .masonry {
@@ -246,7 +247,6 @@ footer {
   list-style-type: none;
 }
 
-
 .logout-btn {
   float: right;
   margin-top: 300px;
@@ -312,32 +312,152 @@ footer {
   margin: 50px;
 }
 
-/*Media Queries*/
+/************************  Title Effect  ************************/
+.tilt {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tilt__back {
+	position: relative;
+}
+
+.tilt__front {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*Hero*/
+.hero {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	bottom: 50px;
+	right: 50px;
+	overflow: hidden;
+}
+
+.hero__imgwrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.hero__imgwrap::after {
+	content: '';
+	position: absolute;
+	background: rgba(76,0,1,0.1);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.hero__img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: 100vh;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.hero__imgwrap .tilt__back,
+.hero__imgwrap .tilt__front {
+	background-size: auto 100vh;
+}
+
+/* Content */
+.content {
+	padding: 4em 0 2em;
+}
+
+.content > p {
+	max-width: 900px;
+	margin: 1em auto;
+	padding: 1em 0.5em 0;
+}
+
+.content p > code {
+	background: #ddd;
+	display: inline-block;
+	padding: 0.25em 0.5em;
+	border-radius: 3px;
+}
+
+.content--color-alt {
+	background: #EDE8DA;
+	color: #A39C88;
+}
+
+/* Related demos */
+.content--related {
+	text-align: center;
+	font-weight: bold;
+	padding: 8em 0;
+}
+
+.media-item {
+	display: inline-block;
+	padding: 1em;
+	vertical-align: top;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.media-item__img {
+	max-width: 100%;
+	opacity: 0.7;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
 
 .media-item:hover .media-item__img,
 .media-item:focus .media-item__img {
-  opacity: 1;
+	opacity: 1;
 }
 
 .media-item__title {
-  margin: 0;
-  padding: 0.5em;
-  font-size: 1em;
+	margin: 0;
+	padding: 0.5em;
+	font-size: 1em;
 }
 
 @media screen and (min-aspect-ratio: 1440/960) {
-  .hero__imgwrap .tilt__back,
-  .hero__imgwrap .tilt__front,
-  .hero__img {
-    width: 100vw;
-    height: auto;
-  }
+	.hero__imgwrap .tilt__back,
+	.hero__imgwrap .tilt__front,
+	.codrops-header {
+		background-size: 100vw auto;
+	}
+	.hero__img {
+		width: 100vw;
+		height: auto;
+	}
 }
 
 @media screen and (max-width: 40em){
-  .hero {
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-  }
+	.hero {
+		left: 20px;
+		bottom: 20px;
+		right: 20px;
+		top: 20px;
+	}
 }
