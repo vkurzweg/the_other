@@ -7,6 +7,7 @@
   ArtistsController.$inject = ['$state', '$log', '$http', '$stateParams', 'artists', 'ArtistsService'];
 
   function ArtistsController($state, $log, $http, $stateParams, artists, ArtistsService){
+    
     var vm = this;
     vm.artists = artists;
     vm.createArtist = createArtist;

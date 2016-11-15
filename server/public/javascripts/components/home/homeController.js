@@ -17,10 +17,5 @@
       LoginService.isLoggedIn = true;
     }
 
-
-
   }
-
-
-
 })();
