@@ -37,7 +37,7 @@
 <main class="content" ui-view></main>
 
 <div ng-controller="LoginController as login">
-  <footer class="footer footer-transparent navbar-fixed-bottom"><a class="login-links" ng-show="login.getUser()" ng-click="login.logout()">Logout</a><a class="login-links" ui-sref="login" ng-hide="login.getUser()">Login</a></footer>
+  <footer class="footer footer-transparent navbar-fixed-bottom"><a class="login-links" ng-show="login.getUser()" ng-click="login.logout()">Logout</a><a class="login-links" ui-sref="login" ng-hide="login.getUser()"><i class="glyphicon glyphicon-cog"></i></a></footer>
 </div>
 
 <!-- Angular scripts -->
