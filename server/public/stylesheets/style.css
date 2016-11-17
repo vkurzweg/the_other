@@ -473,6 +473,9 @@ footer {
   .nav > li > a {
     display: inline;
   }
+  #navlinks {
+    margin-top: -75px;
+  }
 
 }
 
