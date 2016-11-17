@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>The Other</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Anton|Khand|Oswald" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/style.css">
@@ -18,18 +19,18 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-transparent navbar-fixed-top" ng-controller="LoginController as login">
-  <div class="container-fluid">
+<!--   <div class="container-fluid"> -->
     <div class="navbar-header">
       <a id="title" class="navbar-brand" ui-sref="home">The Other</a>
     </div>
     <ul id="navlinks" class="nav navbar-nav">
-      <li><a ng-show="login.getUser()" ui-sref="dashboard">Dashboard</a></li>
-      <li><a ui-sref="artists">Artists</a></li>
-      <li><a ui-sref="products">Products</a></li>
-      <li><a target="_blank" href="http://www.theother.la/products">Shop</a></li>
-      <li><a ui-sref="about">About</a></li>
+      <li><a class="navlink" ng-show="login.getUser()" ui-sref="dashboard">Dashboard</a></li>
+      <li><a class="navlink" ui-sref="artists">Artists</a></li>
+      <li><a class="navlink" ui-sref="products">Products</a></li>
+      <li><a class="navlink" target="_blank" href="http://www.theother.la/products">Shop</a></li>
+      <li><a class="navlink" ui-sref="about">About</a></li>
     </ul>
-  </div>
+<!--   </div> -->
 </nav>
 
 

@@ -461,3 +461,14 @@ footer {
 		top: 20px;
 	}
 }
+
+@media screen and (max-width: 767px){
+  .navbar {
+    max-height: 25%;
+  }
+  .nav > li {
+    float: none;
+  }
+
+}
+
